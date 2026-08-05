@@ -6,7 +6,7 @@
 
 ## Overview
 
-The T-Stick Playground is a Max-based performance environment for the T-Stick that uses a **mapping-by-demonstration** approach to create gesture-sound mappings.
+The T-Stick Playground is a Max-based performance environment for the T-Stick (https://idmil.github.io/tstick-docs/#/) that uses a **mapping-by-demonstration** approach to create gesture-sound mappings.
 
 Users can build dynamic, time-varying sound patches and record synchronized gestures to associate with them. A small neural network is trained to associate motion features with sound parameters, using the recorded examples as input-output pairs. This approach is used throughout the environment to link gestures to sound parameters, audio matrix routings, and trigger events.
 
