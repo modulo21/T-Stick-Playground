@@ -1,0 +1,65 @@
+<jittershader name="pointsize_shader" version="1.0">
+
+    <!--
+      Per-vertex point size from the TEXCOORD inlet (second inlet of jit.gl.mesh).
+      Send a 2-plane matrix: plane 0 = size per point, plane 1 = unused (e.g. 0).
+      Or 1-plane matrix: values go in the first component (texcoord.x).
+      Global scale: pointSizeScale multiplies all sizes (default 1.0).
+    -->
+    <param name="modelViewProjectionMatrix" type="mat4" state="MODELVIEW_PROJECTION_MATRIX" />
+    <param name="jit_position" type="vec3" state="POSITION" />
+    <param name="jit_color" type="vec4" state="COLOR" />
+    <param name="jit_texcoord" type="vec2" state="TEXCOORD" />
+    <param name="pointSizeScale" type="float" default="1.0" />
+
+    <language name="glsl" version="1.5">
+
+        <bind param="modelViewProjectionMatrix" program="vp" />
+        <bind param="jit_position" program="vp" />
+        <bind param="jit_color" program="vp" />
+        <bind param="jit_texcoord" program="vp" />
+        <bind param="pointSizeScale" program="vp" />
+
+        <program name="vp" type="vertex">
+        <![CDATA[
+        #version 330
+
+        in vec3 jit_position;
+        in vec4 jit_color;
+        in vec2 jit_texcoord;
+
+        out vec4 vcolor;
+
+        uniform mat4 modelViewProjectionMatrix;
+        uniform float pointSizeScale;
+
+        void main()
+        {
+            gl_Position = modelViewProjectionMatrix * vec4(jit_position, 1.0);
+            float size = jit_texcoord.x;
+            gl_PointSize = max(1.0, size * pointSizeScale);
+            vcolor = jit_color;
+        }
+        ]]>
+        </program>
+
+        <program name="fp" type="fragment">
+        <![CDATA[
+        #version 330
+
+        in vec4 vcolor;
+        out vec4 fragColor;
+
+        void main()
+        {
+            vec2 uv = gl_PointCoord - 0.5;
+            float r = dot(uv, uv) * 4.0;
+            float alpha = 1.0 - smoothstep(0.95, 1.0, r);
+            fragColor = vec4(vcolor.rgb, vcolor.a * alpha);
+        }
+        ]]>
+        </program>
+
+    </language>
+
+</jittershader>
