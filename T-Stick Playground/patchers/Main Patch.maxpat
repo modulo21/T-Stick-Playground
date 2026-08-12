@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 95.0, 1444.0, 756.0 ],
+        "rect": [ 34.0, 95.0, 1044.0, 756.0 ],
         "openinpresentation": 1,
         "showontab": 1,
         "boxes": [
@@ -979,7 +979,7 @@
                     "outlettype": [ "" ],
                     "patching_rect": [ 259.0, 1107.0, 248.0, 35.0 ],
                     "saved_object_attributes": {
-                        "client_rect": [ 100, 164, 454, 292 ],
+                        "client_rect": [ 4, 100, 1066, 552 ],
                         "parameter_enable": 0,
                         "parameter_mappable": 0,
                         "storage_rect": [ 583, 69, 1034, 197 ]
@@ -1029,7 +1029,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 0.0, 26.0, 1444.0, 730.0 ],
+                        "rect": [ 0.0, 26.0, 1044.0, 730.0 ],
                         "openinpresentation": 1,
                         "showontab": 2,
                         "boxes": [
@@ -12596,8 +12596,9 @@
                     "maxclass": "bpatcher",
                     "name": "CE-Player.maxpat",
                     "numinlets": 2,
-                    "numoutlets": 0,
+                    "numoutlets": 1,
                     "offset": [ 0.0, 0.0 ],
+                    "outlettype": [ "multichannelsignal" ],
                     "patching_rect": [ 905.0, 472.0, 439.0, 167.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 937.0, 407.0, 439.0, 167.0 ],
@@ -12812,7 +12813,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 0.0, 26.0, 1444.0, 730.0 ],
+                        "rect": [ 0.0, 26.0, 1044.0, 730.0 ],
                         "openinpresentation": 1,
                         "showontab": 2,
                         "boxes": [
@@ -16936,7 +16937,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 0.0, 26.0, 1444.0, 730.0 ],
+                        "rect": [ 0.0, 26.0, 1044.0, 730.0 ],
                         "openinpresentation": 1,
                         "showontab": 2,
                         "boxes": [
@@ -21922,8 +21923,6 @@
                                     "saved_object_attributes": {
                                         "autostart": 1,
                                         "defer": 0,
-                                        "node_bin_path": "",
-                                        "npm_bin_path": "",
                                         "watch": 0
                                     },
                                     "text": "node.script my-ip.js @autostart 1",
@@ -23166,9 +23165,7 @@
             "obj-15::obj-62": [ "live.tab", "live.tab", 0 ],
             "obj-15::obj-68": [ "live.text[52]", "live.text", 0 ],
             "obj-18::obj-1": [ "Analyse[2]", "Analyse", 0 ],
-            "obj-18::obj-25": [ "number[40]", "number[1]", 0 ],
             "obj-18::obj-32": [ "live.menu", "live.menu", 0 ],
-            "obj-18::obj-33": [ "live.text[8]", "live.text", 0 ],
             "obj-18::obj-35": [ "number[30]", "number", 0 ],
             "obj-18::obj-53": [ "Analyse[1]", "Analyse", 0 ],
             "obj-18::obj-65": [ "live.text[44]", "live.text", 0 ],
@@ -23475,9 +23472,6 @@
             "parameter_overrides": {
                 "obj-15::obj-110": {
                     "parameter_longname": "live.text[17]"
-                },
-                "obj-18::obj-33": {
-                    "parameter_longname": "live.text[8]"
                 },
                 "obj-18::obj-6::obj-28": {
                     "parameter_longname": "live.tab[3]"

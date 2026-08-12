@@ -2,7 +2,7 @@
     "name": "T-Stick Playground",
     "version": 1,
     "creationdate": 3859641982,
-    "modificationdate": 3867666818,
+    "modificationdate": 3869388012,
     "viewrect": [ 658.0, 205.0, 300.0, 500.0 ],
     "autoorganize": 1,
     "hideprojectwindow": 0,
@@ -17,38 +17,6 @@
             "21.linker.inf.maxpat": {
                 "kind": "patcher",
                 "local": 1
-            },
-            "ce.dictolist.maxpat": {
-                "kind": "patcher",
-                "local": 1,
-                "singleton": {
-                    "bootpath": "~/Documents/Max 9/Projects/Database Exploration/patchers",
-                    "projectrelativepath": "../Database Exploration/patchers"
-                }
-            },
-            "ce.statstodict.maxpat": {
-                "kind": "patcher",
-                "local": 1,
-                "singleton": {
-                    "bootpath": "~/Documents/Max 9/Projects/Database Exploration/patchers",
-                    "projectrelativepath": "../Database Exploration/patchers"
-                }
-            },
-            "ce.transient.slice.maxpat": {
-                "kind": "patcher",
-                "local": 1,
-                "singleton": {
-                    "bootpath": "~/Documents/Max 9/Projects/Database Exploration/patchers",
-                    "projectrelativepath": "../Database Exploration/patchers"
-                }
-            },
-            "poly_corpus.player.maxpat": {
-                "kind": "patcher",
-                "local": 1,
-                "singleton": {
-                    "bootpath": "~/Documents/Max 9/Projects/Database Exploration/patchers",
-                    "projectrelativepath": "../Database Exploration/patchers"
-                }
             },
             "21.linker.gui.maxpat": {
                 "kind": "patcher",
@@ -111,6 +79,10 @@
                 "kind": "patcher",
                 "local": 1
             },
+            "CE-Creator.maxpat": {
+                "kind": "patcher",
+                "local": 1
+            },
             "CE-Grain.maxpat": {
                 "kind": "patcher",
                 "local": 1
@@ -135,7 +107,19 @@
                 "kind": "patcher",
                 "local": 1
             },
-            "CE-Creator.maxpat": {
+            "ce.dictolist.maxpat": {
+                "kind": "patcher",
+                "local": 1
+            },
+            "ce.statstodict.maxpat": {
+                "kind": "patcher",
+                "local": 1
+            },
+            "ce.transient.slice.maxpat": {
+                "kind": "patcher",
+                "local": 1
+            },
+            "poly_corpus.player.maxpat": {
                 "kind": "patcher",
                 "local": 1
             }
@@ -153,14 +137,6 @@
                 "kind": "vectorimagefile",
                 "local": 1
             },
-            "Envelope.wav": {
-                "kind": "audiofile",
-                "local": 1,
-                "singleton": {
-                    "bootpath": "~/Documents/Max 9/Projects/Database Exploration/media",
-                    "projectrelativepath": "../Database Exploration/media"
-                }
-            },
             "updown.svg": {
                 "kind": "vectorimagefile",
                 "local": 1
@@ -175,6 +151,10 @@
             },
             "RampUp.svg": {
                 "kind": "vectorimagefile",
+                "local": 1
+            },
+            "Envelope.wav": {
+                "kind": "audiofile",
                 "local": 1
             },
             "Gaussian.wav": {
