@@ -5,7 +5,7 @@
 ## System Requirements
 
 - Max **9** or later  
-    _(Audio effects require Max 9; the environment will still open in Max 8, but effects will not function correctly.)_
+    _(Audio effects require Max 9; the system relies on gen.expr.codebox which is available from Max 9 on. Some of the modules might still work on Max 8, but you will need to re-download the libraries from the package manager)._
 
 #### Installation
 
